@@ -20,6 +20,7 @@
 		678DBBC443569562410724DE /* libPods-AnatomyDictionary-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 402CB528F943A9D7A5805A77 /* libPods-AnatomyDictionary-tvOSTests.a */; };
 		8E051FCF2A926C6A0F3A06A6 /* libPods-AnatomyDictionary-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E5311A125988EF9FE19D4E /* libPods-AnatomyDictionary-tvOS.a */; };
 		EA7C7E3DB75D0A3CA4AA5369 /* libPods-AnatomyDictionary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A93C0CF731310BACB40FDD /* libPods-AnatomyDictionary.a */; };
+		0AB6FDFBFABA48EEB1F209B4 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 177F100B2770474A852436CC /* Roboto-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		E763B2DC8368AE084238E482 /* Pods-AnatomyDictionary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnatomyDictionary.debug.xcconfig"; path = "Target Support Files/Pods-AnatomyDictionary/Pods-AnatomyDictionary.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		177F100B2770474A852436CC /* Roboto-Regular.ttf */ = {isa = PBXFileReference; name = "Roboto-Regular.ttf"; path = "../src/assets/fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				308022F975C5E5C63C163A06 /* Pods */,
+				334D0FB275CA44F598167432 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -197,6 +200,15 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		334D0FB275CA44F598167432 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				177F100B2770474A852436CC /* Roboto-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -285,7 +297,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 940;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -338,6 +350,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				0AB6FDFBFABA48EEB1F209B4 /* Roboto-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
