@@ -5,7 +5,7 @@ import {EvaIconsPack} from '@ui-kitten/eva-icons';
 import {dark, mapping} from '@eva-design/eva';
 import {default as customTheme} from './config/custom-theme';
 import {default as customMapping} from './config/custom-mapping';
-import {AppNavigator} from './components/AppNavigator';
+import {AppNavigator} from './navigation/AppNavigator';
 
 export default function() {
   return (

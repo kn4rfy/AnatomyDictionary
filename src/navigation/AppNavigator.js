@@ -4,10 +4,10 @@ import {createDrawerNavigator} from 'react-navigation-drawer';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 import Drawer from './Drawer';
 import TabBar from './TabBar';
-import HomeScreen from './Home';
-import DetailsScreen from './Details';
-import SettingsScreen from './Settings';
-import AboutScreen from './About';
+import HomeScreen from '../components/Home';
+import DetailsScreen from '../components/Details';
+import SettingsScreen from '../components/Settings';
+import AboutScreen from '../components/About';
 
 const TabNavigator = createBottomTabNavigator(
   {
