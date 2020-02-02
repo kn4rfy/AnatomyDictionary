@@ -1,5 +1,9 @@
 import React from 'react';
-import {Tab, TabBar, TopNavigation} from '@ui-kitten/components';
+import {
+  BottomNavigation,
+  BottomNavigationTab,
+  Divider,
+} from '@ui-kitten/components';
 import SafeAreaView from 'react-native-safe-area-view';
 
 export default function({navigation}) {
@@ -10,11 +14,13 @@ export default function({navigation}) {
 
   return (
     <SafeAreaView>
-      <TopNavigation title="Anatomy Dictionary" alignment="center" />
-      <TabBar selectedIndex={navigation.state.index} onSelect={onSelect}>
-        <Tab title="HOME" />
-        <Tab title="DETAILS" />
-      </TabBar>
+      <Divider />
+      <BottomNavigation
+        selectedIndex={navigation.state.index}
+        onSelect={onSelect}>
+        <BottomNavigationTab title="HOME" />
+        <BottomNavigationTab title="DETAILS" />
+      </BottomNavigation>
     </SafeAreaView>
   );
 }

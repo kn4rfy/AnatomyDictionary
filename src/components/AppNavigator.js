@@ -1,7 +1,7 @@
 import React from 'react';
 import {createAppContainer} from 'react-navigation';
 import {createDrawerNavigator} from 'react-navigation-drawer';
-import {createMaterialTopTabNavigator} from 'react-navigation-tabs';
+import {createBottomTabNavigator} from 'react-navigation-tabs';
 import Drawer from './Drawer';
 import TabBar from './TabBar';
 import HomeScreen from './Home';
@@ -9,7 +9,7 @@ import DetailsScreen from './Details';
 import SettingsScreen from './Settings';
 import AboutScreen from './About';
 
-const TabNavigator = createMaterialTopTabNavigator(
+const TabNavigator = createBottomTabNavigator(
   {
     Home: HomeScreen,
     Details: DetailsScreen,
