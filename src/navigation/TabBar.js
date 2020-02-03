@@ -18,8 +18,9 @@ export default function({navigation}) {
       <BottomNavigation
         selectedIndex={navigation.state.index}
         onSelect={onSelect}>
-        <BottomNavigationTab title="HOME" />
-        <BottomNavigationTab title="DETAILS" />
+        <BottomNavigationTab title="ROOTS" />
+        <BottomNavigationTab title="TERMS" />
+        <BottomNavigationTab title="METHODOLOGIES" />
       </BottomNavigation>
     </SafeAreaView>
   );
