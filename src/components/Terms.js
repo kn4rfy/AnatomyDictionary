@@ -1,13 +1,16 @@
 import React, {useRef, useState} from 'react';
 import {
   Divider,
-  Icon, Input,
-  Layout, List, ListItem,
-  Text,
+  Icon,
+  Input,
+  Layout,
+  List,
+  ListItem,
   TopNavigation,
   TopNavigationAction,
 } from '@ui-kitten/components';
 import SafeAreaView from 'react-native-safe-area-view';
+import _ from 'lodash';
 import {terms} from '../mock/terms';
 
 export default function({navigation}) {
@@ -25,6 +28,7 @@ export default function({navigation}) {
   function renderItem({item}) {
     return <ListItem title={`${item.description}`} />;
   }
+
   return (
     <SafeAreaView style={{flex: 1}}>
       <TopNavigation

@@ -19,7 +19,7 @@ export default function({navigation}) {
 
   function onSearch(search) {
     const data = _.filter(roots, data => {
-	    return _.includes(data.description, search);
+      return _.includes(data.description, search);
     });
 
     setState(data);
