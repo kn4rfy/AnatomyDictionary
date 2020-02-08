@@ -26,13 +26,7 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Easi-er/Info.plist"; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Easi-er/main.m"; sourceTree = "<group>"; };
 		177F100B2770474A852436CC /* Roboto-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Regular.ttf"; path = "../src/assets/fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; };
-		286B82961F6182E4F0F1D7F9 /* Pods-Easi-er-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easi-er-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-Easi-er-tvOSTests/Pods-Easi-er-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		5B67B1FE4AEF05C47040B8BC /* Pods-Easi-er-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easi-er-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-Easi-er-tvOS/Pods-Easi-er-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		6694652D28E45BA3D27F616D /* Pods-Easi-erTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easi-erTests.release.xcconfig"; path = "Target Support Files/Pods-Easi-erTests/Pods-Easi-erTests.release.xcconfig"; sourceTree = "<group>"; };
-		6CB7E9F3EFD3E649BB56FCD7 /* Pods-Easi-er-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easi-er-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Easi-er-tvOSTests/Pods-Easi-er-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		72A93C0CF731310BACB40FDD /* libPods-Easi-er.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Easi-er.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D0D0DDD52C873F455F3A74F8 /* Pods-Easi-er-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easi-er-tvOS.release.xcconfig"; path = "Target Support Files/Pods-Easi-er-tvOS/Pods-Easi-er-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		E63329DDCBEE05B7584DC789 /* Pods-Easi-erTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easi-erTests.debug.xcconfig"; path = "Target Support Files/Pods-Easi-erTests/Pods-Easi-erTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E763B2DC8368AE084238E482 /* Pods-Easi-er.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easi-er.debug.xcconfig"; path = "Target Support Files/Pods-Easi-er/Pods-Easi-er.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
@@ -79,12 +73,6 @@
 			children = (
 				E763B2DC8368AE084238E482 /* Pods-Easi-er.debug.xcconfig */,
 				0D7E0D4787A96339E3242A3C /* Pods-Easi-er.release.xcconfig */,
-				5B67B1FE4AEF05C47040B8BC /* Pods-Easi-er-tvOS.debug.xcconfig */,
-				D0D0DDD52C873F455F3A74F8 /* Pods-Easi-er-tvOS.release.xcconfig */,
-				6CB7E9F3EFD3E649BB56FCD7 /* Pods-Easi-er-tvOSTests.debug.xcconfig */,
-				286B82961F6182E4F0F1D7F9 /* Pods-Easi-er-tvOSTests.release.xcconfig */,
-				E63329DDCBEE05B7584DC789 /* Pods-Easi-erTests.debug.xcconfig */,
-				6694652D28E45BA3D27F616D /* Pods-Easi-erTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
