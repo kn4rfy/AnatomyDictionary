@@ -10,19 +10,18 @@ import {
   TopNavigationAction,
 } from '@ui-kitten/components';
 import SafeAreaView from 'react-native-safe-area-view';
-import _ from 'lodash';
 import {terms} from '../mock/terms';
 
 export default function({navigation}) {
   let inputRef = useRef(null);
   const [state, setState] = useState(terms);
 
-  function onSearch(search) {
-    const data = _.filter(terms, data => {
-      return _.includes(data.description, search);
-    });
-
-    setState(data);
+  function onSearch(query) {
+    setState(
+      terms.filter(item =>
+        item.description.toLocaleLowerCase().includes(query.toLowerCase()),
+      ),
+    );
   }
 
   function renderItem({item}) {

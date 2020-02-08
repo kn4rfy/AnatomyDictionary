@@ -20,7 +20,6 @@ export default function({navigation}) {
         onSelect={onSelect}>
         <BottomNavigationTab title="ROOTS" />
         <BottomNavigationTab title="TERMS" />
-        <BottomNavigationTab title="METHODOLOGIES" />
       </BottomNavigation>
     </SafeAreaView>
   );
