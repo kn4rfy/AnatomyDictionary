@@ -1,4 +1,4 @@
-package com.anatomydictionary;
+package com.easi.er;
 
 import android.app.Application;
 import android.content.Context;
