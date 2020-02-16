@@ -17,7 +17,7 @@ export default function({navigation}) {
   function BackAction() {
     return (
       <TopNavigationAction
-        icon={style => <Icon {...style} name="arrow-back" />}
+        icon={style => <Icon {...style} name="arrow-ios-back-outline" />}
         onPress={navigateBack}
       />
     );
@@ -26,13 +26,13 @@ export default function({navigation}) {
   return (
     <SafeAreaView style={{flex: 1}}>
       <TopNavigation
-        title="About"
+        title="Settings"
         alignment="center"
         leftControl={BackAction()}
       />
       <Divider />
       <Layout style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-        <Text category="h1">ABOUT</Text>
+        <Text category="h1">SETTINGS</Text>
       </Layout>
     </SafeAreaView>
   );

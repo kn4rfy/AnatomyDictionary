@@ -10,7 +10,7 @@ import {
   TopNavigationAction,
 } from '@ui-kitten/components';
 import SafeAreaView from 'react-native-safe-area-view';
-import {roots} from '../mock/roots';
+import {roots} from '../../mock/roots';
 
 export default function({navigation}) {
   let inputRef = useRef(null);
@@ -25,7 +25,12 @@ export default function({navigation}) {
   }
 
   function renderItem({item}) {
-    return <ListItem title={`${item.description}`} />;
+    return (
+      <ListItem
+        title={`${item.description}`}
+        onPress={() => navigation.navigate('RootDetails', {root: item})}
+      />
+    );
   }
 
   return (

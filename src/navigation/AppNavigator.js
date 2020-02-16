@@ -1,17 +1,30 @@
 import React from 'react';
 import {createAppContainer} from 'react-navigation';
-import {createDrawerNavigator} from 'react-navigation-drawer';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
+import {createDrawerNavigator} from 'react-navigation-drawer';
+import {createStackNavigator} from 'react-navigation-stack';
 import Drawer from './Drawer';
 import TabBar from './TabBar';
-import RootsScreen from '../components/Roots';
-import TermsScreen from '../components/Terms';
-import SettingsScreen from '../components/Settings';
-import AboutScreen from '../components/About';
+import RootsScreen from '../screens/roots/Roots';
+import RootDetailsScreen from '../screens/roots/RootDetails';
+import TermsScreen from '../screens/Terms';
+import SettingsScreen from '../screens/Settings';
+import AboutScreen from '../screens/About';
+
+const rootStackNavigator = createStackNavigator(
+  {
+    Roots: RootsScreen,
+    RootDetails: RootDetailsScreen,
+  },
+  {
+    initialRouteName: 'Roots',
+    headerMode: 'none',
+  },
+);
 
 const TabNavigator = createBottomTabNavigator(
   {
-    Roots: RootsScreen,
+    rootStackNavigator: rootStackNavigator,
     Terms: TermsScreen,
   },
   {

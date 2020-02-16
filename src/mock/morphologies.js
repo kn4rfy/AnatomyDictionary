@@ -1,4 +1,4 @@
-export const meanings = [
+export const morphologies = [
   {
     id: 1,
     description: 'Abdomen (plu., Abdomines), the belly, abdomen',
