@@ -10,6 +10,7 @@ import RootDetailsScreen from '../screens/roots/RootDetails';
 import TermsScreen from '../screens/Terms';
 import SettingsScreen from '../screens/Settings';
 import AboutScreen from '../screens/About';
+import HomeScreen from '../screens/Home';
 
 const rootStackNavigator = createStackNavigator(
   {
@@ -34,6 +35,7 @@ const TabNavigator = createBottomTabNavigator(
 
 const DrawerNavigator = createDrawerNavigator(
   {
+    Home: HomeScreen,
     Main: TabNavigator,
     Settings: SettingsScreen,
     About: AboutScreen,

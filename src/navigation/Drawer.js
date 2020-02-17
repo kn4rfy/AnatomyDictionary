@@ -3,7 +3,12 @@ import SafeAreaView from 'react-native-safe-area-view';
 import {Drawer, Layout} from '@ui-kitten/components';
 import Logo from '../assets/logo.svg';
 
-const drawerData = [{title: 'Home'}, {title: 'Settings'}, {title: 'About'}];
+const drawerData = [
+  {title: 'Home'},
+  {title: 'Roots & Terms'},
+  {title: 'Settings'},
+  {title: 'About'},
+];
 
 export default function({navigation}) {
   function onSelect(index) {
@@ -17,9 +22,8 @@ export default function({navigation}) {
         style={{
           justifyContent: 'center',
           alignItems: 'center',
-          paddingVertical: 64,
         }}>
-        <Logo />
+        <Logo width={256} height={256} />
       </Layout>
     );
   }
