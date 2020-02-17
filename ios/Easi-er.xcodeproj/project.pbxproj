@@ -13,6 +13,7 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		EA7C7E3DB75D0A3CA4AA5369 /* libPods-Easi-er.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A93C0CF731310BACB40FDD /* libPods-Easi-er.a */; };
+		902EFEE9A68E4ABC83456B2E /* logo.svg in Resources */ = {isa = PBXBuildFile; fileRef = 70864C620F4440BB9527DE95 /* logo.svg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		E763B2DC8368AE084238E482 /* Pods-Easi-er.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easi-er.debug.xcconfig"; path = "Target Support Files/Pods-Easi-er/Pods-Easi-er.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		70864C620F4440BB9527DE95 /* logo.svg */ = {isa = PBXFileReference; name = "logo.svg"; path = "../src/assets/logo.svg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				177F100B2770474A852436CC /* Roboto-Regular.ttf */,
+				70864C620F4440BB9527DE95 /* logo.svg */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				0AB6FDFBFABA48EEB1F209B4 /* Roboto-Regular.ttf in Resources */,
+				902EFEE9A68E4ABC83456B2E /* logo.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
