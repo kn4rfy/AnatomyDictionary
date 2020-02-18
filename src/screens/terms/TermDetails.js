@@ -43,10 +43,12 @@ export default function({navigation}) {
   }
 
   function renderItem(item) {
-    return <Text key={item.id}>{item?.description}</Text>;
+    return (
+      <Layout key={item.id} style={{paddingTop: 8}}>
+        <Text>{item?.description}</Text>
+      </Layout>
+    );
   }
-
-  console.log(state);
 
   return (
     <SafeAreaView style={{flex: 1}}>
@@ -68,17 +70,18 @@ export default function({navigation}) {
       />
       <Divider />
       <ScrollView>
-        <Layout style={{padding: 16}}>
-          <Layout style={{paddingVertical: 4}}>
+        <Layout style={{paddingHorizontal: 16}}>
+          <Layout style={{paddingTop: 16}}>
             <Text>{state?.term?.description}</Text>
           </Layout>
-          <Layout style={{marginLeft: 32}}>
+          <Layout style={{marginLeft: 32, paddingVertical: 16}}>
             <Text style={{textDecorationLine: 'underline'}}>
               Term Morphology:
             </Text>
             {state?.morphologies?.map(renderItem)}
           </Layout>
-          <Layout style={{padding: 32}}>
+          <Divider />
+          <Layout style={{paddingVertical: 16}}>
             <Text style={{textDecorationLine: 'underline'}}>Forms Used:</Text>
             {state?.formsUsed?.map(renderItem)}
           </Layout>

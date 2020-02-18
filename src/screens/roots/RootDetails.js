@@ -51,7 +51,7 @@ export default function({navigation}) {
 
   function renderTerms(item) {
     return (
-      <Layout key={item.id} style={{paddingVertical: 4}}>
+      <Layout key={item.id} style={{paddingBottom: 8}}>
         <Text>{item.description}</Text>
       </Layout>
     );
@@ -59,14 +59,17 @@ export default function({navigation}) {
 
   function renderItem(item) {
     return (
-      <Layout key={item.id} style={{paddingVertical: 16}}>
+      <Layout key={item.id} style={{paddingTop: 16}}>
         {item?.terms?.map(renderTerms)}
-        <Layout style={{marginLeft: 32}}>
+        <Layout style={{marginLeft: 32, paddingTop: 8, paddingBottom: 16}}>
           <Text style={{textDecorationLine: 'underline'}}>
             Term Morphology:
           </Text>
-          <Text>{item.description}</Text>
+          <Layout style={{paddingTop: 8}}>
+            <Text>{item.description}</Text>
+          </Layout>
         </Layout>
+        <Divider />
       </Layout>
     );
   }
@@ -91,10 +94,14 @@ export default function({navigation}) {
       />
       <Divider />
       <ScrollView>
-        <Layout style={{padding: 16}}>
+        <Layout style={{paddingHorizontal: 16}}>
           {state?.morphologies?.map(renderItem)}
-          <Text style={{textDecorationLine: 'underline'}}>Forms Used:</Text>
-          <Text>{state?.form?.description}</Text>
+          <Layout style={{paddingVertical: 16}}>
+            <Text style={{textDecorationLine: 'underline'}}>Forms Used:</Text>
+            <Layout style={{paddingTop: 8}}>
+              <Text>{state?.form?.description}</Text>
+            </Layout>
+          </Layout>
         </Layout>
       </ScrollView>
     </SafeAreaView>
