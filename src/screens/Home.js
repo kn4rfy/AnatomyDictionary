@@ -1,38 +1,16 @@
-import React, {useRef, useState} from 'react';
+import React from 'react';
 import SafeAreaView from 'react-native-safe-area-view';
 import {
   Divider,
   Icon,
   Input,
   Layout,
-  ListItem,
   TopNavigation,
   TopNavigationAction,
 } from '@ui-kitten/components';
 import Logo from '../assets/logo.svg';
-import {roots} from '../mock/roots';
 
 export default function({navigation}) {
-  let inputRef = useRef(null);
-  const [state, setState] = useState(roots);
-
-  function onSearch(query) {
-    setState(
-      roots.filter(item =>
-        item.description.toLocaleLowerCase().includes(query.toLowerCase()),
-      ),
-    );
-  }
-
-  function renderItem({item}) {
-    return (
-      <ListItem
-        title={`${item.description}`}
-        onPress={() => navigation.navigate('RootDetails', {root: item})}
-      />
-    );
-  }
-
   return (
     <SafeAreaView style={{flex: 1}}>
       <TopNavigation
@@ -51,13 +29,10 @@ export default function({navigation}) {
           <Logo width={256} height={256} />
         </Layout>
         <Input
-          ref={ref => {
-            inputRef = ref;
-          }}
           placeholder={'Search roots'}
           icon={style => <Icon {...style} name={'search'} />}
-          onIconPress={() => inputRef.focus()}
-          onChangeText={onSearch}
+          onIconPress={() => navigation.navigate('Main')}
+          onFocus={() => navigation.navigate('Main')}
         />
       </Layout>
     </SafeAreaView>
