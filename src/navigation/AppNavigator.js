@@ -7,7 +7,8 @@ import Drawer from './Drawer';
 import TabBar from './TabBar';
 import RootsScreen from '../screens/roots/Roots';
 import RootDetailsScreen from '../screens/roots/RootDetails';
-import TermsScreen from '../screens/Terms';
+import TermsScreen from '../screens/terms/Terms';
+import TermDetailsScreen from '../screens/terms/TermDetails';
 import SettingsScreen from '../screens/Settings';
 import AboutScreen from '../screens/About';
 import HomeScreen from '../screens/Home';
@@ -24,10 +25,21 @@ const rootStackNavigator = createStackNavigator(
   },
 );
 
+const termsStackNavigator = createStackNavigator(
+  {
+    Terms: TermsScreen,
+    TermDetails: TermDetailsScreen,
+  },
+  {
+    initialRouteName: 'Terms',
+    headerMode: 'none',
+  },
+);
+
 const TabNavigator = createBottomTabNavigator(
   {
     rootStackNavigator: rootStackNavigator,
-    Terms: TermsScreen,
+    termsStackNavigator: termsStackNavigator,
   },
   {
     tabBarComponent: TabBar,

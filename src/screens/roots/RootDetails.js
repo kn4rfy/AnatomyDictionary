@@ -3,7 +3,6 @@ import {
   Divider,
   Icon,
   Layout,
-  List,
   Text,
   TopNavigation,
   TopNavigationAction,
@@ -13,11 +12,11 @@ import _ from 'lodash';
 import {terms} from '../../mock/terms';
 import {morphologies} from '../../mock/morphologies';
 import {formsUsed} from '../../mock/formsUsed';
+import {ScrollView} from 'react-navigation';
 
 export default function({navigation}) {
-  const [state, setState] = useState({terms: [], morphologies: [], forms: []});
+  const [state, setState] = useState({morphologies: [], form: {}});
   const {root} = navigation?.state?.params;
-  const formUsedData = formsUsed[formsUsed.map(e => e.id).indexOf(root.id)];
   useEffect(getTerms, []);
 
   function getTerms() {
@@ -25,42 +24,43 @@ export default function({navigation}) {
       term?.roots?.every(rootItem => rootItem.id === root?.id),
     );
 
-    let data = [];
+    let morphologyData = [];
 
     filteredTerms.forEach(term =>
       term?.morphologies?.forEach(morphologyItem => {
-        data.push({
+        morphologyData.push({
           morphologyId: morphologyItem.id,
           term: term,
         });
       }),
     );
 
-    const test = _.map(
-      _.groupBy(data, o => o.morphologyId),
-      (i, k) => {
-        return {
-          ...morphologies[morphologies.map(e => e.id.toString()).indexOf(k)],
-          terms: _.map(i, m => m.term),
-        };
-      },
-    );
-
-    setState(test);
+    setState({
+      morphologies: _.map(
+        _.groupBy(morphologyData, o => o.morphologyId),
+        (i, k) => {
+          return {
+            ...morphologies[morphologies.map(e => e.id.toString()).indexOf(k)],
+            terms: _.map(i, m => m.term),
+          };
+        },
+      ),
+      form: formsUsed[formsUsed.map(e => e.id).indexOf(root.id)],
+    });
   }
 
-  function renderTerms({item}) {
+  function renderTerms(item) {
     return (
-      <Layout style={{paddingVertical: 4}}>
+      <Layout key={item.id} style={{paddingVertical: 4}}>
         <Text>{item.description}</Text>
       </Layout>
     );
   }
 
-  function renderItem({item}) {
+  function renderItem(item) {
     return (
-      <Layout style={{padding: 16}}>
-        <List data={item.terms} renderItem={renderTerms} />
+      <Layout key={item.id} style={{paddingVertical: 16}}>
+        {item?.terms?.map(renderTerms)}
         <Layout style={{marginLeft: 32}}>
           <Text style={{textDecorationLine: 'underline'}}>
             Term Morphology:
@@ -90,13 +90,13 @@ export default function({navigation}) {
         }
       />
       <Divider />
-      <Layout style={{flex: 4}}>
-        <List data={state} renderItem={renderItem} />
+      <ScrollView>
         <Layout style={{padding: 16}}>
+          {state?.morphologies?.map(renderItem)}
           <Text style={{textDecorationLine: 'underline'}}>Forms Used:</Text>
-          <Text>{formUsedData?.description}</Text>
+          <Text>{state?.form?.description}</Text>
         </Layout>
-      </Layout>
+      </ScrollView>
     </SafeAreaView>
   );
 }
