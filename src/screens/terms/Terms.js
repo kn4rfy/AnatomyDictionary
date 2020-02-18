@@ -54,7 +54,7 @@ export default function({navigation}) {
         }
       />
       <Divider />
-      <Layout style={{flex: 1}}>
+      <Layout style={{padding: 16}}>
         <Input
           ref={ref => {
             inputRef = ref;
@@ -64,6 +64,9 @@ export default function({navigation}) {
           onIconPress={() => inputRef.focus()}
           onChangeText={onSearch}
         />
+      </Layout>
+      <Divider />
+      <Layout style={{flex: 1}}>
         <List data={state} renderItem={renderItem} />
       </Layout>
     </SafeAreaView>
