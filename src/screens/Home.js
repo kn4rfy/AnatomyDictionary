@@ -36,7 +36,7 @@ export default function({navigation}) {
   return (
     <SafeAreaView style={{flex: 1}}>
       <TopNavigation
-        title="Roots"
+        title="Anatomy & Physiology Terms"
         alignment="center"
         rightControls={
           <TopNavigationAction

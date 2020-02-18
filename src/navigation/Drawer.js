@@ -6,6 +6,7 @@ import Logo from '../assets/logo.svg';
 const drawerData = [
   {title: 'Home'},
   {title: 'Roots & Terms'},
+  {title: 'Books'},
   {title: 'Settings'},
   {title: 'About'},
 ];
