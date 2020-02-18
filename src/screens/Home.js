@@ -31,8 +31,8 @@ export default function({navigation}) {
         <Input
           placeholder={'Search roots'}
           icon={style => <Icon {...style} name={'search'} />}
-          onIconPress={() => navigation.navigate('Main')}
-          onFocus={() => navigation.navigate('Main')}
+          onIconPress={() => navigation.navigate('Roots', {search: true})}
+          onFocus={() => navigation.navigate('Roots', {search: true})}
         />
       </Layout>
     </SafeAreaView>

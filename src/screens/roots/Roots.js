@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {
   Divider,
   Icon,
@@ -15,6 +15,14 @@ import {roots} from '../../mock/roots';
 export default function({navigation}) {
   let inputRef = useRef(null);
   const [state, setState] = useState(roots);
+  const search = navigation?.state?.params?.search;
+  useEffect(init, []);
+
+  function init() {
+    if (search) {
+      setTimeout(() => inputRef.focus(), 200);
+    }
+  }
 
   function onSearch(query) {
     setState(
